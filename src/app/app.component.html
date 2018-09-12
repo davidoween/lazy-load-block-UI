@@ -1,0 +1,16 @@
+<p>este spinner se para al cargar otro modulo</p>
+<app-spinner></app-spinner>
+<ul>
+  <li>
+    <a class="nav-link-menu" routerLinkActive="active" routerLink="/ucomun">Home</a>
+  </li>
+  <li>
+    <a class="nav-link-menu" routerLinkActive="active" routerLink="/ucomun/usuarios">Usuarios</a>
+  </li>
+</ul>
+<div *ngIf="loading" class="loader">
+  <app-spinner></app-spinner>
+</div>
+<div *ngIf="!loading">
+  <router-outlet></router-outlet>
+</div>
